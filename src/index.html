@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Agroton</title>
+      <link rel="stylesheet" href="./css/main.css">
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+            <div class="header__inner">
+               <a class="logo" href="./index.html">
+                  <img src="./images/logo.svg" alt="logo" />
+               </a>
+               <nav class="nav">
+                  <ul class="nav-list">
+                     <li class="nav-item"><a class="nav-item__link" href="#">about company</a></li>
+                     <li class="nav-item"><a class="nav-item__link" href="#">products</a></li>
+                     <li class="nav-item"><a class="nav-item__link" href="#">partners</a></li>
+                     <li class="nav-item"><a class="nav-item__link" href="#">blog</a></li>
+                  </ul>
+               </nav>
+               <a class="header-btn" href="#">Contact us</a>
+            </div>
+         </div>
+		</header>
+      <main class="main">
+         <section class="page-section top">
+            <div class="container">
+               <div class="top__inner">
+                  <div class="top__up">
+                     <h1 class="top__title">Agroton</h1>
+                     <p class="top__subtitle">one of the largest producers of agricultural products in Ukraine</p>
+                  </div>
+                  <div class="top__down">
+                     <div class="top__card">
+                        <div class="top__card-image">
+                           <img src="./images/top-bg.jpg" alt="subtract">
+                        </div>
+                        <div class="top__card-text">
+                           <p></p>
+                           <p></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="container">
+            <button commandfor="modal" command="show-modal" class="modal-btn">Open</button>
+            <dialog id="modal" class="modal" closedby="any">
+               So, the modal is Opened
+               <button commandfor="modal" command="close">Close</button>
+            </dialog>
+         </div>
+      </footer>
+      <script src="./js/main.js"></script>
+	</body>
+</html>

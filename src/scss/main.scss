@@ -1,0 +1,88 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'base/reset';
+@use 'layout/header';
+@use 'pages/home';
+@use 'responsive/media';
+
+body {
+   display: flex;
+   flex-direction: column;
+   background-color: $main-bg-col;
+   color: $main-col;
+   font-family: $font-main;
+   min-height: 100vh;
+   min-width: 320px;
+}
+
+.main {
+   flex: 1;
+}
+
+.container {
+   max-width: 1420px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+// Modal things
+
+button[commandfor="modal"] {
+   color: $white-col;
+   background-color: $main-col;
+   padding: 10px;
+   border-radius: 0 0.75rem;
+}
+
+.modal {
+   position: fixed;
+   inset: 0;
+   max-width: 480px;
+   padding: 2rem;
+   margin: auto;
+   color: $black-col;
+   background-color: $white-col;
+
+   // Border without radius
+   // border: solid 0.25rem;
+   // border-image-source: linear-gradient(to bottom right, hotpink, rebeccapurple);
+   // border-image-slice: 4;
+
+   //Border with radius
+   border: solid 0.25rem transparent;
+   border-radius: 0.5rem;
+   box-shadow: 0.5rem 0.5rem 0 0px rgba(40, 60, 0, 0.6);
+
+
+   // Animation
+
+   opacity: 0;
+   transform: translateY(1rem);
+   transition: opacity 0.25s,
+      transform 0.25s,
+      display 0.25s allow-discrete,
+      overlay 0.25s allow-discrete;
+
+   display: flex;
+   flex-direction: column;
+   place-items: center;
+   gap: 1rem;
+
+   &[open] {
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   &::backdrop {
+      background: rgb(0, 0, 0, 0.6);
+      backdrop-filter: blur(2px);
+   }
+}
+
+@starting-style {
+   .modal[open] {
+      opacity: 0;
+      transform: translateY(1rem);
+   }
+}
