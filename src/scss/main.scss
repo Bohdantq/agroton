@@ -1,7 +1,9 @@
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
+@use 'base/fonts';
 @use 'base/reset';
 @use 'layout/header';
+@use 'layout/footer';
 @use 'pages/home';
 @use 'responsive/media';
 
@@ -13,6 +15,8 @@ body {
    font-family: $font-main;
    min-height: 100vh;
    min-width: 320px;
+   font-size: $size-default;
+   line-height: $line-height;
 }
 
 .main {
@@ -20,10 +24,48 @@ body {
 }
 
 .container {
-   max-width: 1420px;
+   max-width: 1460px;
    width: 100%;
    margin: 0 auto;
    padding: 0 20px;
+}
+
+.page-section {
+   margin: 100px 0;
+}
+
+.bold {
+   font-weight: 700;
+}
+
+.accent {
+   color: $orange-col;
+}
+
+.btn {
+   padding: 20px 94px 20px 40px;
+   font-size: 16px;
+   color: $white-col;
+   background-color: $black-col;
+   border-radius: 96px;
+   text-transform: uppercase;
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../images/arr.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      top: 50%;
+      right: 5px;
+      width: 54px;
+      height: 54px;
+      background-color: $white-col;
+      border-radius: 50%;
+      transform: translateY(-50%);
+   }
 }
 
 // Modal things
@@ -51,7 +93,7 @@ button[commandfor="modal"] {
 
    //Border with radius
    border: solid 0.25rem transparent;
-   border-radius: 0.5rem;
+   border-radius: $bor-radius;
    box-shadow: 0.5rem 0.5rem 0 0px rgba(40, 60, 0, 0.6);
 
 

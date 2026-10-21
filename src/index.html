@@ -4,59 +4,196 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Agroton</title>
-      <link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body>
 		<header class="header">
 			<div class="container">
-            <div class="header__inner">
-               <a class="logo" href="./index.html">
-                  <img src="./images/logo.svg" alt="logo" />
-               </a>
-               <nav class="nav">
-                  <ul class="nav-list">
-                     <li class="nav-item"><a class="nav-item__link" href="#">about company</a></li>
-                     <li class="nav-item"><a class="nav-item__link" href="#">products</a></li>
-                     <li class="nav-item"><a class="nav-item__link" href="#">partners</a></li>
-                     <li class="nav-item"><a class="nav-item__link" href="#">blog</a></li>
-                  </ul>
-               </nav>
-               <a class="header-btn" href="#">Contact us</a>
-            </div>
-         </div>
+				<div class="header__inner">
+					<a class="logo" href="./index.html">
+						<img src="./images/logo.svg" alt="logo" />
+					</a>
+					<nav class="nav">
+						<ul class="nav-list">
+							<li class="nav-item"><a class="nav-item__link" href="#">about company</a></li>
+							<li class="nav-item"><a class="nav-item__link" href="#">products</a></li>
+							<li class="nav-item"><a class="nav-item__link" href="#">partners</a></li>
+							<li class="nav-item"><a class="nav-item__link" href="#">blog</a></li>
+						</ul>
+					</nav>
+					<a class="header-btn" href="#">Contact us</a>
+				</div>
+			</div>
 		</header>
-      <main class="main">
-         <section class="page-section top">
-            <div class="container">
-               <div class="top__inner">
-                  <div class="top__up">
-                     <h1 class="top__title">Agroton</h1>
-                     <p class="top__subtitle">one of the largest producers of agricultural products in Ukraine</p>
-                  </div>
-                  <div class="top__down">
-                     <div class="top__card">
-                        <div class="top__card-image">
-                           <img src="./images/top-bg.jpg" alt="subtract">
-                        </div>
-                        <div class="top__card-text">
-                           <p></p>
-                           <p></p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-      </main>
-      <footer class="footer">
-         <div class="container">
-            <button commandfor="modal" command="show-modal" class="modal-btn">Open</button>
-            <dialog id="modal" class="modal" closedby="any">
-               So, the modal is Opened
-               <button commandfor="modal" command="close">Close</button>
-            </dialog>
-         </div>
-      </footer>
-      <script src="./js/main.js"></script>
+		<main class="main">
+			<section class="top">
+				<div class="top__inner">
+					<div class="container">
+						<div class="top__up">
+							<h1 class="top__title">Agroton</h1>
+							<p class="top__subtitle">one of the largest producers of agricultural products in Ukraine</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="cards">
+				<div class="container">
+					<div class="cards-list">
+						<div class="cards__item">
+							<div class="cards__item-media">
+								<img class="cards__item-image" src="./images/production.png" alt="production" />
+								<a class="cards__item-arrow" href="" aria-label="Open">
+									<img src="./images/arrow-top-right.svg" alt="arrow-top-right" />
+								</a>
+							</div>
+							<p class="cards__item-text bold">Agroton is among the leaders in wheat production in Ukraine</p>
+							<p class="cards__item-text">
+								<span class="bold">We rank</span> <span class="cards__item-accent">4th in Ukraine</span> in terms of
+								wheat production, ensuring high quality grain thanks to modern technologies and fertile Ukrainian
+								fields.
+							</p>
+						</div>
+						<div class="cards__item">
+							<div class="cards__item-media">
+								<img class="cards__item-image" src="./images/chicken.png" alt="chicken" />
+								<a class="cards__item-arrow" href="" aria-label="Open">
+									<img src="./images/arrow-top-right.svg" alt="arrow-top-right" />
+								</a>
+							</div>
+							<p class="cards__item-text bold">Agroton – number 1 in chicken production in Ukraine</p>
+							<p class="cards__item-text">
+								<span class="bold">We lead the chicken market</span> in Ukraine, guaranteeing the highest quality
+								products thanks to modern technologies, safety controls
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="page-section statistics">
+				<div class="container">
+					<div class="statistics__inner">
+						<div class="statistics__nums">
+							<ul class="statistics__nums-list">
+								<li class="statistics__nums-item">
+									<p class="statistics__nums-item--title">100%</p>
+									<p class="statistics__nums-item--subtitle">quality of production</p>
+								</li>
+								<li class="statistics__nums-item">
+									<p class="statistics__nums-item--title">50+</p>
+									<p class="statistics__nums-item--subtitle">modern agricultural technologies</p>
+								</li>
+								<li class="statistics__nums-item">
+									<p class="statistics__nums-item--title">1.5 mil. tons</p>
+									<p class="statistics__nums-item--subtitle">products we produce every year.</p>
+								</li>
+								<li class="statistics__nums-item">
+									<p class="statistics__nums-item--title">10+ countries</p>
+									<p class="statistics__nums-item--subtitle">we export products all over the world.</p>
+								</li>
+							</ul>
+						</div>
+						<div class="statistics__info">
+							<div class="statistics__info-text">
+								<span class="bold">Agroton is the largest diversified vertically</span> integrated agricultural producer
+								in Eastern Ukraine. Agroton is a regional leader in the cultivation of agricultural crops, livestock
+								farming
+							</div>
+							<div class="statistics__info-body">
+								<img class="statistics__info-image" src="./images/wheat field.jpg" alt="Wheat field" />
+								<div class="statistics__info-wrapper">
+									<p class="statistics__descr">
+										Agroton is <span class="accent">30 years</span> of leadership in the agricultural sector. We
+										cultivate <span class="accent">200,000+ hectares of land</span>, supply the market with quality
+										products and export <span class="accent">to 10+ countries.</span>
+										<span class="bold">Our mission is</span> to develop agriculture, introduce innovations and provide
+										people with natural products.
+									</p>
+									<ul class="statistics__list">
+										<li class="statistics__item">
+											<p class="statistics__label"><span class="accent">№1</span> in sunflower production in Ukraine</p>
+											<p class="statistics__value">48,000 hectares of sown areas.</p>
+										</li>
+										<li class="statistics__item">
+											<p class="statistics__label"><span class="accent">№4</span> in wheat production</p>
+											<p class="statistics__value">50,000 hectares of fields.</p>
+										</li>
+										<li class="statistics__item">
+											<p class="statistics__label">
+												<span class="accent">№1</span> in grain elevator capacity in Luhansk region
+											</p>
+											<p class="statistics__value">235,000 tons of storage.</p>
+										</li>
+										<li class="statistics__item">
+											<p class="statistics__label">
+												<span class="accent">№1</span> in poultry production in Luhansk region
+											</p>
+											<p class="statistics__value">4,000,000 chickens.</p>
+										</li>
+										<li class="statistics__item">
+											<p class="statistics__label"><span class="accent">№5</span> in milk production in Ukraine</p>
+											<p class="statistics__value">4,500 dairy cattle.</p>
+										</li>
+										<li class="statistics__item">
+											<p class="statistics__label"><span class="accent">№2</span> in bakery production in Luhansk</p>
+											<p class="statistics__value">7,000 tons of products per year.</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-section products">
+				<div class="products__inner">
+					<div class="container">
+						<h2 class="products__titel">High quality agricultural products</h2>
+						<ul class="products__list">
+							<li class="products__item">
+								<p class="products__item-titel">🌽 Cereal crops</p>
+								<p class="products__item-desc">(wheat, barley, corn)</p>
+								<a class="products__item-link" href="#" aria-label="Cereal crops"></a>
+							</li>
+							<li class="products__item">
+								<p class="products__item-titel">🌻 Oilseeds</p>
+								<p class="products__item-desc">(sunflower, rapeseed, soybean)</p>
+								<a class="products__item-link" href="#" aria-label="Oilseeds"></a>
+							</li>
+							<li class="products__item">
+								<p class="products__item-titel">🥛 Dairy products</p>
+								<p class="products__item-desc">(milk, dairy products)</p>
+								<a class="products__item-link" href="#" aria-label="Dairy products"></a>
+							</li>
+							<li class="products__item">
+								<p class="products__item-titel">🍞 Bakery products</p>
+								<p class="products__item-desc">(bread, pastries)</p>
+								<a class="products__item-link" href="#" aria-label="Bakery products"></a>
+							</li>
+							<li class="products__item">
+								<p class="products__item-titel">🐔 Poultry farming</p>
+								<p class="products__item-desc">(chicken, eggs)</p>
+								<a class="products__item-link" href="#" aria-label="Poultry farming"></a>
+							</li>
+							<li class="products__item">
+								<p class="products__item-titel">🍏 Vegetables and fruits</p>
+								<p class="products__item-desc">(if available in production)</p>
+								<a class="products__item-link" href="#" aria-label="Vegetables and fruits"></a>
+							</li>
+						</ul>
+						<button class="btn">see catalog</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<button commandfor="modal" command="show-modal" class="modal-btn">Open</button>
+				<dialog id="modal" class="modal" closedby="any">
+					So, the modal is Opened
+					<button commandfor="modal" command="close">Close</button>
+				</dialog>
+			</div>
+		</footer>
+		<script src="./js/main.js"></script>
 	</body>
 </html>
