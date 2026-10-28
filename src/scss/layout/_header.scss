@@ -12,6 +12,38 @@
        align-items: center;
        padding: 20px 0;
     }
+
+    &-btn {
+       text-transform: uppercase;
+       background-color: $main-col;
+       color: $white-col;
+       padding: 0.5rem 2rem;
+       border-radius: $bor-radius;
+    }
+
+    &-btn {
+       text-transform: uppercase;
+       background-color: $main-col;
+       color: $white-col;
+       padding: 0.5rem 2rem;
+       border-radius: $bor-radius;
+    }
+
+    &::before {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100vw;
+       height: 100vh;
+       background-color: rgba(0, 0, 0, 0.5);
+       content: '';
+       display: none;
+    }
+
+    &--active {
+       background-color: rgba(255, 255, 255, 0.8);
+       box-shadow: 0px 5px 10px $gray-col;
+    }
  }
 
  .nav {
@@ -20,20 +52,22 @@
        gap: 30px;
     }
 
-    &-item__link {
-       text-transform: uppercase;
+    &-item {
+       &:first-child {
+          display: none;
+       }
+
+       &__link {
+          text-transform: uppercase;
+       }
+    }
+
+    &-btn,
+    &-copy {
+       display: none;
     }
  }
 
- .header-btn {
-    text-transform: uppercase;
-    background-color: $main-col;
-    color: $white-col;
-    padding: 0.5rem 2rem;
-    border-radius: $bor-radius;
- }
-
- .header--scrolled {
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 5px 10px $gray-col;
+ .btn-burger {
+    display: none;
  }

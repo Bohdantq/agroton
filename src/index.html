@@ -4,24 +4,31 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Agroton</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body>
-		<header class="header header--scrolled">
+		<header class="header">
 			<div class="container">
 				<div class="header__inner">
 					<a class="logo" href="./index.html">
 						<img src="./images/logo.svg" alt="logo" />
 					</a>
-					<nav class="nav">
+					<nav class="nav" id="nav">
 						<ul class="nav-list">
+							<li class="nav-item nav-item--active"><a class="nav-item__link" href="#">home</a></li>
 							<li class="nav-item"><a class="nav-item__link" href="#">about company</a></li>
 							<li class="nav-item"><a class="nav-item__link" href="#">products</a></li>
 							<li class="nav-item"><a class="nav-item__link" href="#">partners</a></li>
 							<li class="nav-item"><a class="nav-item__link" href="#">blog</a></li>
 						</ul>
+						<a class="nav-btn" href="#">Contact us <i class="fa-solid fa-arrow-right"></i></a>
+						<p class="nav-copy">2010 Agroton © All rights reserved.</p>
 					</nav>
 					<a class="header-btn" href="#">Contact us</a>
+					<button class="btn-burger" aria-expanded="false" aria-controls="nav">
+						<i class="fa-solid fa-bars"></i>
+					</button>
 				</div>
 			</div>
 		</header>
@@ -36,7 +43,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="cards">
+			<section class="cards">
 				<div class="container">
 					<div class="cards-list">
 						<div class="cards__item">
@@ -48,9 +55,8 @@
 							</div>
 							<p class="cards__item-text bold">Agroton is among the leaders in wheat production in Ukraine</p>
 							<p class="cards__item-text">
-								<span class="bold">We rank</span> <span class="cards__item-accent">4th in Ukraine</span> in terms of
-								wheat production, ensuring high quality grain thanks to modern technologies and fertile Ukrainian
-								fields.
+								<span class="bold">We rank</span> <span class="accent">4th in Ukraine</span> in terms of wheat
+								production, ensuring high quality grain thanks to modern technologies and fertile Ukrainian fields.
 							</p>
 						</div>
 						<div class="cards__item">
@@ -68,7 +74,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 			<section class="page-section statistics">
 				<div class="container">
 					<div class="statistics__inner">
@@ -99,7 +105,10 @@
 								farming
 							</div>
 							<div class="statistics__info-body">
-								<img class="statistics__info-image" src="./images/wheat field.jpg" alt="Wheat field" />
+								<picture>
+									<source media="(max-width: 1024px)" srcset="./images/wheat-field-1600.jpg" />
+									<img class="statistics__info-image" src="./images/wheat-field.jpg" alt="Wheat field" />
+								</picture>
 								<div class="statistics__info-wrapper">
 									<p class="statistics__descr">
 										Agroton is <span class="accent">30 years</span> of leadership in the agricultural sector. We
@@ -147,35 +156,35 @@
 			<section class="page-section products">
 				<div class="products__inner">
 					<div class="container">
-						<h2 class="products__titel">High quality agricultural products</h2>
+						<h2 class="products__title">High quality agricultural products</h2>
 						<ul class="products__list">
 							<li class="products__item">
-								<p class="products__item-titel">🌽 Cereal crops</p>
+								<p class="products__item-title">🌽 Cereal crops</p>
 								<p class="products__item-desc">(wheat, barley, corn)</p>
 								<a class="products__item-link" href="#" aria-label="Cereal crops"></a>
 							</li>
 							<li class="products__item">
-								<p class="products__item-titel">🌻 Oilseeds</p>
+								<p class="products__item-title">🌻 Oilseeds</p>
 								<p class="products__item-desc">(sunflower, rapeseed, soybean)</p>
 								<a class="products__item-link" href="#" aria-label="Oilseeds"></a>
 							</li>
 							<li class="products__item">
-								<p class="products__item-titel">🥛 Dairy products</p>
+								<p class="products__item-title">🥛 Dairy products</p>
 								<p class="products__item-desc">(milk, dairy products)</p>
 								<a class="products__item-link" href="#" aria-label="Dairy products"></a>
 							</li>
 							<li class="products__item">
-								<p class="products__item-titel">🍞 Bakery products</p>
+								<p class="products__item-title">🍞 Bakery products</p>
 								<p class="products__item-desc">(bread, pastries)</p>
 								<a class="products__item-link" href="#" aria-label="Bakery products"></a>
 							</li>
 							<li class="products__item">
-								<p class="products__item-titel">🐔 Poultry farming</p>
+								<p class="products__item-title">🐔 Poultry farming</p>
 								<p class="products__item-desc">(chicken, eggs)</p>
 								<a class="products__item-link" href="#" aria-label="Poultry farming"></a>
 							</li>
 							<li class="products__item">
-								<p class="products__item-titel">🍏 Vegetables and fruits</p>
+								<p class="products__item-title">🍏 Vegetables and fruits</p>
 								<p class="products__item-desc">(if available in production)</p>
 								<a class="products__item-link" href="#" aria-label="Vegetables and fruits"></a>
 							</li>
@@ -252,8 +261,10 @@
 									<p class="blog__subtitle">
 										<span class="accent">Agroton • 20 Jan 2025</span>
 									</p>
-									<h5 class="blog__title">Agroton expands sown areas</h5>
-									<a class="blog__link" href="#"></a>
+									<h5 class="blog__title">
+										Agroton expands sown areas
+										<a class="blog__link" href="#"></a>
+									</h5>
 									<p class="blog__text">
 										This year we increased sown areas by 10%, which will allow us to increase the production of grain
 										and oilseed crops.
@@ -266,8 +277,10 @@
 									<p class="blog__subtitle">
 										<span class="accent">Agroton • 20 Jan 2025</span>
 									</p>
-									<h5 class="blog__title">Export to a new country!</h5>
-									<a class="blog__link" href="#"></a>
+									<h5 class="blog__title">
+										Export to a new country!
+										<a class="blog__link" href="#"></a>
+									</h5>
 									<p class="blog__text">
 										We entered the market of [country name] and expanded the geography of supplies of quality Ukrainian
 										products.
@@ -280,8 +293,11 @@
 									<p class="blog__subtitle">
 										<span class="accent">Agroton • 20 Jan 2025</span>
 									</p>
-									<h5 class="blog__title">Modern technologies in livestock farming</h5>
-									<a class="blog__link" href="#"></a>
+									<h5 class="blog__title">
+										Modern technologies in livestock farming
+
+										<a class="blog__link" href="#"></a>
+									</h5>
 									<p class="blog__text">
 										Agroton has implemented innovative systems for feeding and caring for livestock, which improves
 										product quality.

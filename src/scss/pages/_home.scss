@@ -1,5 +1,9 @@
 @use 'abstracts/variables' as *;
 
+.page-section {
+   margin: 100px 0;
+}
+
 .top {
    width: 100%;
    max-width: 1920px;
@@ -13,6 +17,7 @@
       min-height: clamp(352px, 272.8px + 24.75vw, 748px);
       width: 100%;
       border-radius: $bor-radius;
+      text-align: center;
    }
 
    &__up {
@@ -200,7 +205,7 @@
       border-radius: $bor-radius;
    }
 
-   &__titel {
+   &__title {
       text-align: center;
       font-size: 40px;
    }
@@ -290,13 +295,13 @@
 
    }
 
-   &-titel {
+   &-title {
       font-size: 28px;
       margin-bottom: 14px;
       padding-top: 50px;
    }
 
-   &-titel,
+   &-title,
    &-desc {
       padding-left: 25px;
    }
@@ -471,7 +476,7 @@
       position: relative;
    }
 
-   &__title::after {
+   &__link::after {
       content: '';
       position: absolute;
       width: 25px;
