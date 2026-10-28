@@ -10,7 +10,7 @@
    margin: 0 auto;
 
    &__inner {
-      background-image: url("../../images/top-bg.jpg");
+      background-image: url("/images/top-bg.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -262,36 +262,36 @@
       bottom: -4px;
       left: -4px;
       background-position: center;
-      background-image: url("../../images/product-link.svg");
+      background-image: url("images/product-link.svg");
    }
 
    &:nth-child(1)::after {
-      background-image: url("../../images/crops.png");
+      background-image: url("images/crops.png");
 
    }
 
    &:nth-child(2)::after {
-      background-image: url("../../images/oilseeds.png");
+      background-image: url("images/oilseeds.png");
 
    }
 
    &:nth-child(3)::after {
-      background-image: url("../../images/milk.png");
+      background-image: url("images/milk.png");
 
    }
 
    &:nth-child(4)::after {
-      background-image: url("../../images/bread.png");
+      background-image: url("images/bread.png");
 
    }
 
    &:nth-child(5)::after {
-      background-image: url("../../images/eggs.png");
+      background-image: url("images/eggs.png");
 
    }
 
    &:nth-child(6)::after {
-      background-image: url("../../images/apples.png");
+      background-image: url("images/apples.png");
 
    }
 
@@ -403,7 +403,7 @@
       height: 25px;
       background-position: center;
       background-repeat: no-repeat;
-      background-image: url("../../images/product-link.svg");
+      background-image: url("images/product-link.svg");
       left: 0;
    }
 
@@ -485,7 +485,7 @@
       top: 50%;
       transform: translateY(-50%);
       background-position: center;
-      background-image: url("../../images/product-link.svg");
+      background-image: url("images/product-link.svg");
    }
 
    &__text {
