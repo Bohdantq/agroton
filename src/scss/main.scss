@@ -50,7 +50,7 @@ body {
    &::after {
       content: '';
       position: absolute;
-      background-image: url(../images/arr.svg);
+      background-image: url('../images/arr.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
