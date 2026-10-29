@@ -5,7 +5,14 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'pages/home';
+@use 'pages/contact';
 @use 'responsive/media';
+
+
+::selection{
+   color: $orange-col;
+   background-color: $green-bg-col;
+}
 
 body {
    display: flex;

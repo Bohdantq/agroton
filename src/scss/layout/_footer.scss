@@ -3,33 +3,34 @@
 
 
  .footer {
-    background-color: $black-col;
-    padding: 100px 0;
-    color: $white-col;
+   background-color: $black-col;
+   padding: 100px 0 50px;
+   color: $gray-col;
 
-    &__inner{
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
-      font-size: 16px;
-      font-family: $font-secondary;
-    }
+   &__inner {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 30px;
+     font-size: 16px;
+     font-family: $font-secondary;
+   }
 
-    &__legal{
-      display: flex;
-      justify-content: space-between;
-      border-top: 1px solid $white-col;
-      padding-top: 15px;
-    }
+   &__legal {
+     display: flex;
+     justify-content: space-between;
+     border-top: 1px solid $white-col;
+     padding-top: 30px;
+   }
 
 
-    &__title{
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
+   &__title {
+     margin-bottom: 20px;
+     text-transform: uppercase;
+     font-weight: 700;
+     color: $white-col;
+   }
 
-    &__item + &__item{
-      padding-top: 15px;
-    }
+   &__item+&__item {
+     padding-top: 15px;
+   }
  }

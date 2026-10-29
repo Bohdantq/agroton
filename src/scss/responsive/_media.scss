@@ -121,6 +121,10 @@
          width: 100%;
          border-bottom: 1px solid $gray-col-500;
 
+         &:hover {
+            color: $black-col;
+         }
+
          &:first-child {
             display: block;
          }
@@ -290,6 +294,12 @@
          gap: 15px;
       }
    }
+
+   .contact{
+      &__image{
+         display: none;
+      }
+   }
 }
 
 
@@ -365,6 +375,31 @@
    .footer__inner {
       flex-direction: column;
       gap: 15px;
+   }
+
+   .hero{
+      &__inner{
+         padding: 25px;
+      }
+      &__title{
+         font-size: 36px;
+      }
+   }
+
+   .contact__title{
+      font-size: 24px;
+   }
+
+   .form{
+      &__rows{
+         grid-template-columns: 1fr;
+      }
+   }
+
+   .info{
+      &__card{
+         max-width: 100%;
+      }
    }
 
 }

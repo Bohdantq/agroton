@@ -50,16 +50,22 @@
     &-list {
        @include flex-center;
        gap: 30px;
+       font-size: 1rem;
     }
 
     &-item {
+      transition: .3s ease;
        &:first-child {
           display: none;
        }
 
        &__link {
           text-transform: uppercase;
+          font-weight: 700;
        }
+    }
+    &-item:hover{
+      color: $orange-col;
     }
 
     &-btn,

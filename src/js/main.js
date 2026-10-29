@@ -28,3 +28,4 @@ function updateHeader() {
 window.addEventListener('scroll', updateHeader);
 
 updateHeader();
+

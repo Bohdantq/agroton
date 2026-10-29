@@ -396,15 +396,17 @@
       margin-top: 15px;
    }
 
-   &__item::before {
+   &__link::before {
       content: '';
       position: absolute;
       width: 25px;
       height: 25px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
       background-position: center;
       background-repeat: no-repeat;
       background-image: url("../images/product-link.svg");
-      left: 0;
    }
 
    &__note {
