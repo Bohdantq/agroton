@@ -1,0 +1,80 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+
+.production {
+   &__inner {
+      font-family: $font-secondary;
+      place-content: end;
+      height: 380px;
+      border-radius: $bor-radius;
+      padding: 56px;
+      color: $white-col;
+      background-image: url("../images/products/products-hero.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      p {
+         max-width: 580px;
+      }
+   }
+
+   &__subtitle {
+      font-size: 14px;
+      color: $secondOrange-col;
+   }
+
+   &__title {
+      font-size: 48px;
+      font-weight: 700;
+      padding: 16px 0;
+   }
+}
+
+.categories {
+   margin: 60px 0;
+
+   &__title {
+      font-size: 28px;
+      font-weight: 700;
+   }
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 25px;
+   }
+
+   &__item {
+      max-width: 300px;
+      width: 100%;
+      background-color: $gray-bg-col;
+      padding: 16px;
+      font-size: 14px;
+      color: $gray-col;
+      border-radius: $bor-radius;
+   }
+
+   &__item a:first-of-type {
+      display: block;
+      width: 100%;
+   }
+
+   &__image{
+      height: 180px;
+      border-radius: $bor-radius;
+   }
+
+   &__item-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 1rem 0 5px;
+      color: $main-col;
+   }
+
+
+}

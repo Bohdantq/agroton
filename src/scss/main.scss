@@ -6,6 +6,7 @@
 @use 'layout/footer';
 @use 'pages/home';
 @use 'pages/contact';
+@use 'pages/products';
 @use 'responsive/media';
 
 
@@ -57,7 +58,7 @@ body {
    &::after {
       content: '';
       position: absolute;
-      background-image: url('../images/arr.svg');
+      background-image: url('../images/svg/arr.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -71,3 +72,9 @@ body {
    }
 }
 
+a{
+   transition: .3s ease;
+   &:active{
+      transform: scale(0.95);
+   }
+}

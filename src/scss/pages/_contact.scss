@@ -9,9 +9,10 @@
       border-radius: $bor-radius;
       padding: 56px;
       color: $white-col;
-      background-image: url("../images/contact-hero.jpg");
+      background-image: url("../images/contact/contact-hero.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
 
       p {
          max-width: 580px;
@@ -37,7 +38,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: balance;
+      flex-wrap: wrap;
       gap: 25px;
    }
 

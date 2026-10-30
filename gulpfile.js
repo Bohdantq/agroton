@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const { series, parallel, watch } = gulp;
 const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const terser = require('gulp-terser');
@@ -30,6 +32,9 @@ function styles() {
    return gulp.src('src/scss/main.scss')
       .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
+      .pipe(postcss([
+         autoprefixer({ overrideBrowserslist: ['last 2 versions', '> 0.5%'] })
+      ]))
       .pipe(cleanCSS())
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('dist/css'))
@@ -48,28 +53,41 @@ function svg() {
       .pipe(gulp.dest('dist/images'));
 }
 
-// raster images (png, jpg, webp...) go through sharp
-function images(done) {
+// raster images: copy through sharp + make a .webp copy of jpg/png
+async function images() {
    const srcDir = 'src/images';
    const distDir = 'dist/images';
-   if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true });
+   const rasterFormats = ['.png', '.jpg', '.jpeg', '.webp', '.avif'];
+   const webpFrom = ['.png', '.jpg', '.jpeg'];
 
-   const files = fs.readdirSync(srcDir).filter(file => {
-      const isFile = fs.statSync(path.join(srcDir, file)).isFile();
-      return isFile && !file.toLowerCase().endsWith('.svg');
-   });
+   function walk(dir) {
+      return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
+         const fullPath = path.join(dir, entry.name);
+         return entry.isDirectory() ? walk(fullPath) : [fullPath];
+      });
+   }
 
-   let remaining = files.length;
-   if (remaining === 0) return done();
+   const files = walk(srcDir).filter(file => !file.toLowerCase().endsWith('.svg'));
 
-   files.forEach(file => {
-      sharp(path.join(srcDir, file))
-         .toFile(path.join(distDir, file), (err) => {
-            if (err) console.error(err);
-            remaining--;
-            if (remaining === 0) done();
-         });
-   });
+   await Promise.all(files.map(async (file) => {
+      const relPath = path.relative(srcDir, file);
+      const outPath = path.join(distDir, relPath);
+      const ext = path.extname(file).toLowerCase();
+
+      await fs.promises.mkdir(path.dirname(outPath), { recursive: true });
+
+      if (!rasterFormats.includes(ext)) {
+         await fs.promises.copyFile(file, outPath); // gif и прочее
+         return;
+      }
+
+      await sharp(file).toFile(outPath);
+
+      if (webpFrom.includes(ext)) {
+         const webpPath = outPath.slice(0, -ext.length) + '.webp';
+         await sharp(file).webp({ quality: 85 }).toFile(webpPath);
+      }
+   }));
 }
 
 function fonts() {
