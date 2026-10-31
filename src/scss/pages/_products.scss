@@ -3,6 +3,8 @@
 
 
 .production {
+   font-family: $font-secondary;
+
    &__inner {
       font-family: $font-secondary;
       place-content: end;
@@ -34,10 +36,12 @@
 
 .categories {
    margin: 60px 0;
+   font-family: $font-secondary;
 
    &__title {
       font-size: 28px;
       font-weight: 700;
+      text-transform: capitalize;
    }
 
    &__list {
@@ -64,7 +68,7 @@
       width: 100%;
    }
 
-   &__image{
+   &__image {
       height: 180px;
       border-radius: $bor-radius;
    }
@@ -75,6 +79,166 @@
       margin: 1rem 0 5px;
       color: $main-col;
    }
+}
 
+.featured {
+   font-family: $font-secondary;
 
+   &__inner {
+      padding-bottom: 80px;
+      border-bottom: 1px solid $gray-col-500;
+   }
+
+   &__title {
+      color: $main-col;
+      font-weight: 600;
+      font-size: 28px;
+      margin-bottom: 25px;
+      text-transform: capitalize;
+   }
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+   }
+
+   &__item {
+      width: 32%;
+      background-color: $gray-bg-col;
+      padding: 1rem;
+      border-radius: $bor-radius;
+      font-size: 1rem;
+   }
+
+   &__card-image {
+      width: 100%;
+      border-radius: $bor-radius;
+      object-position: center;
+      margin-bottom: 1rem;
+   }
+
+   &__card-meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 25px;
+   }
+
+   &__card-badge {
+      color: $orange-col;
+      background-color: $white-col;
+      padding: 5px 10px;
+      font-weight: 600;
+      border: 1px solid $gray-col-500;
+      border-radius: $bor-radius;
+   }
+
+   &__card-name {
+      font-weight: 600;
+      font-size: 18px;
+      margin: 10px 0;
+   }
+}
+
+.best {
+   margin: 50px 0;
+   font-family: $font-secondary;
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+   }
+
+   &__image {
+      width: 100%;
+      object-fit: cover;
+      border-radius: $bor-radius;
+   }
+
+   &__content {
+      max-width: 700px;
+   }
+
+   &__subtitle {
+      text-transform: uppercase;
+      color: $secondOrange-col;
+      font-weight: 600;
+      font-size: 14px;
+   }
+
+   &__title {
+      font-size: 36px;
+      font-weight: 600;
+      margin: 10px 0;
+      text-transform: capitalize;
+   }
+
+   &__text {
+      color: $gray-col;
+      margin-bottom: 25px;
+   }
+
+   &__descr {
+      margin-bottom: 25px;
+   }
+
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid $gray-col;
+   }
+
+   &__name {
+      color: $gray-col;
+      font-weight: 600;
+      text-transform: capitalize;
+   }
+
+   &__btn {
+      text-transform: capitalize !important;
+      font-weight: 600;
+   }
+}
+
+.advantages {
+   margin-bottom: 100px;
+   font-family: $font-secondary;
+
+   &__header {
+      margin-bottom: 25px;
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: capitalize;
+   }
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 25px;
+   }
+
+   &__item {
+      max-width: 300px;
+      width: 100%;
+      padding: 25px;
+      background-color: $gray-bg-col;
+      border-radius: $bor-radius;
+   }
+
+   &__title {
+      margin: 12px 0;
+      font-weight: 600;
+      font-size: 32px;
+   }
+
+   & p {
+      color: $gray-col;
+      font-size: 14px;
+   }
 }

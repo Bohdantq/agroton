@@ -86,6 +86,14 @@
          width: 100%;
       }
    }
+
+   .advantages__list {
+      justify-content: center;
+   }
+
+   .featured__list {
+      justify-content: center;
+   }
 }
 
 @media screen and (max-width: 790px) {
@@ -305,6 +313,16 @@
          display: none;
       }
    }
+
+   .best {
+      &__inner {
+         flex-direction: column;
+      }
+
+      &__image {
+         height: 400px;
+      }
+   }
 }
 
 
@@ -407,6 +425,14 @@
       &__card {
          max-width: 100%;
       }
+   }
+
+   .featured__item {
+      width: 100%;
+   }
+
+   .best__descr {
+      font-size: 14px;
    }
 
 }
